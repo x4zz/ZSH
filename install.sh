@@ -487,7 +487,7 @@ echo "----------------------------------------------------------"
 echo "                  INSTALL FONTS                           "
 echo "----------------------------------------------------------" 
 
-necessary()
+install_fonts()
 {
     if   [[ "$OSTYPE" == "linux-gnu" ]]; then
         local fontDir="/usr/share/fonts/"
@@ -509,10 +509,8 @@ necessary()
     if ! [[ "$OSTYPE" == "darwin"*  ]] ; then
       fc-cache -f -v
     fi
-    cd "$BVZSH" || exit
 }
-
-#cd "$HOME" || exit
+install_fonts
 
 echo "----------------------------------------------------------"
 echo "                  INSTALL CUSTOM PLUGINS                  "
