@@ -514,9 +514,9 @@ necessary()
 
 #cd "$HOME" || exit
 
-echo "--------------------"
-echo " INSTALL PLUGINS "
-echo ""
+echo "----------------------------------------------------------"
+echo "                  INSTALL CUSTOM PLUGINS                  "
+echo "----------------------------------------------------------" 
 
 if [ -d $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
     cd $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions && git pull
@@ -615,7 +615,6 @@ if chsh -s $(which zsh) && $(which zsh) -i -c 'omz update'; then
 else
     echo -e "Something is wrong"
 fi
-
 exec zsh
 
 exit
